@@ -12,6 +12,8 @@
 #import "WKWebViewJavascriptBridge.h"
 #endif
 
+#ifndef supportsWKWebView //不支持WKWebView才会使用
+
 #if __has_feature(objc_arc_weak)
     #define WVJB_WEAK __weak
 #else
@@ -209,3 +211,5 @@
 #endif
 
 @end
+
+#endif

@@ -17,6 +17,8 @@
 #import <WebKit/WebKit.h>
 #endif
 
+#ifndef supportsWKWebView //不支持WKWebView才会使用
+
 #if defined __MAC_OS_X_VERSION_MAX_ALLOWED
     #define WVJB_PLATFORM_OSX
     #define WVJB_WEBVIEW_TYPE WebView
@@ -48,3 +50,5 @@
 - (void)disableJavscriptAlertBoxSafetyTimeout;
 
 @end
+
+#endif
